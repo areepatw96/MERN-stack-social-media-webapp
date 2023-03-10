@@ -126,3 +126,10 @@ Apr. 2014, p. 42.
 [^4]: https://devtechnosys.com/insights/mern-stack/
 
 [^5]: https://cdn.dribbble.com/users/78806/screenshots/15327109/media/30fd93b62aa520792bfb4956f7eed854.png?compress=1&resize=400x300
+
+## Contributors
+ - Arefa Patwary 
+ - Areeba Hassan 
+ - Sindhu Anchuri
+ - Venkata Neha Avula
+ - Mounika Tatineni
