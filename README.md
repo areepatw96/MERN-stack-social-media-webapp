@@ -32,7 +32,7 @@ This project is essential for several reasons:
   memories, and this app will provide users with a platform to share those experiences with 
   others and preserve them for the future.
 - Creating a fullstack MERN application with various features: It is a complex process 
-  that demands a thorough understanding of modern web development tools to build a fullstack   MERN app with authentication, likes, dark mode, and a responsive design.
+  that demands a thorough understanding of modern web development tools to build a fullstack     MERN app with authentication, likes, dark mode, and a responsive design.
 - Learning and applying various web development techniques: This project offers the 
   chance to study and use several web development techniques, such as React, MongoDB, 
   Node.js, Express, Material-UI, and JWT authentication.
