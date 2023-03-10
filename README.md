@@ -8,7 +8,7 @@ In today's digital age, social media has become integral to our daily lives. Peo
 media platforms to connect, share, and communicate with others globally. However, many 
 existing social media platforms have limitations, and users often need help with privacy and 
 security concerns. Therefore, there is a need for a new social media website that provides users 
-with a more personalized, user-friendly, and secure experience [1].
+with a more personalized, user-friendly, and secure experience [^1].
 One primary motivation from a business perspective is that social media is a vital component of 
 people's lives today. Social apps are, therefore, in demand. We can communicate with one 
 another by creating a responsive social media app. Users can exchange thoughts, memories, and 
@@ -24,14 +24,14 @@ apps.
 
 The project's significance lies in providing users a secure and user-friendly platform to share 
 their precious memories. We will build a full-stack web application with the MERN, a powerful 
-and popular technology stack [3].
+and popular technology stack [^3].
 
 This project is essential for several reasons:
 
 - To give users a platform for sharing and saving their memories: People value their 
   memories, and this app will provide users with a platform to share those experiences with 
   others and preserve them for the future.
-- Creating a full-stack MERN application with various features: It is a complex process 
+- Creating a fullstack MERN application with various features: It is a complex process 
   that demands a thorough understanding of modern web development tools to build a fullstack   MERN app with authentication, likes, dark mode, and a responsive design.
 - Learning and applying various web development techniques: This project offers the 
   chance to study and use several web development techniques, such as React, MongoDB, 
@@ -45,7 +45,7 @@ This project includes several distinctive features that set it apart, such as au
 dark mode, and a responsive design. However, rather than being a general-purpose tool, it 
 concentrates on a particular use case: sharing and preserving memories. Lastly, cutting-edge web 
 development tools have been used to create this web app, such as the MERN stack, a well-liked 
-and full technology stack for creating full-stack online applications [4].
+and full technology stack for creating full-stack online applications [^4].
 Overall the project offers a complete social media website built using the MERN stack, which 
 stands for MongoDB, Express.js, React, and Node.js. This web app aims to provide users a more 
 personalized, user-friendly, and secure experience. Additionally, this web app can be a valuable 
@@ -58,7 +58,7 @@ The main objective behind developing this social media web application is to bui
 connecting people to facilitate accessible communication and effective social interaction. This 
 Social media app will allow people to interact with each other and can be used for sharing news, 
 events, wishes, opinions, and various other forms of information. Nowadays, social media apps 
-have become the most used applications in our daily lives [2].
+have become the most used applications in our daily lives [^2].
 Our application has an interactive and fully responsive UI where you can post updates, including 
 pictures or text messages. Any person following us can view our posts, send a like, and comment 
 on them. In addition, we can follow any person of our choice and can also unfollow them.
@@ -108,7 +108,7 @@ Some of the main features and their functionalities are listed below:
 We will work on adding or deleting few elements as the projects goes by to make a unique social 
 media app.
 
-### Sample UI
+### Sample UI [^5]
 
 ![This is an image](https://cdn.dribbble.com/users/78806/screenshots/15327109/media/30fd93b62aa520792bfb4956f7eed854.png?compress=1&resize=400x300)
 
@@ -116,3 +116,13 @@ media app.
 > [GitHub Pages](https://github.com/areepatw96/MERN-stack-social-media-webapp).
 ### References
 
+[^1]: https://medium.com/@annayam/5-proven-strategies-to-increase-your-followers-in-2023-f0b3429f4675
+
+[^2]:  Hayward, David. “DarkBASIC Professional.” Micro Mart, no. 1308, Dennis Publishing Ltd., 
+Apr. 2014, p. 42.
+
+[^3]: https://www.geeksforgeeks.org/mern-stack/
+
+[^4]: https://devtechnosys.com/insights/mern-stack/
+
+[^5]: https://cdn.dribbble.com/users/78806/screenshots/15327109/media/30fd93b62aa520792bfb4956f7eed854.png?compress=1&resize=400x300
