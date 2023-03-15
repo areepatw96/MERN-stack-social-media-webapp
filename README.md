@@ -130,9 +130,9 @@ media app.
 [^2]:  Hayward, David. “DarkBASIC Professional.” Micro Mart, no. 1308, Dennis Publishing Ltd., 
 Apr. 2014, p. 42.
 
-[^3]: https://www.geeksforgeeks.org/mern-stack/
+[^3]: GeeksforGeeks. (2021, October 7). Mern stack. GeeksforGeeks. Retrieved March 15, 2023, from https://www.geeksforgeeks.org/mern-stack/ 
 
-[^4]: https://devtechnosys.com/insights/mern-stack/
+[^4]: Mern stack - what is it? introduction &amp; benefits. Dev Technosys. (2022, December 15). Retrieved March 15, 2023, from https://devtechnosys.com/insights/mern-stack/ 
 
-[^5]: https://cdn.dribbble.com/users/78806/screenshots/15327109/media/30fd93b62aa520792bfb4956f7eed854.png?compress=1&resize=400x300
+[^5]: Explore the world's leading design portfolios. Dribbble. (n.d.). Retrieved March 15, 2023, from https://cdn.dribbble.com/users/78806/screenshots/15327109/media/30fd93b62aa520792bfb4956f7eed854.png?compress=1&amp;resize=400x300 
 
