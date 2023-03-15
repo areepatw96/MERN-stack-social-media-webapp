@@ -125,7 +125,7 @@ media app.
 
 ### References
 
-[^1]: https://medium.com/@annayam/5-proven-strategies-to-increase-your-followers-in-2023-f0b3429f4675
+[^1]: Mahale, A. (2023, March 5). 5 proven strategies to increase your followers in 2023. Medium. Retrieved March 15, 2023, from https://medium.com/@annayam/5-proven-strategies-to-increase-your-followers-in-2023-f0b3429f4675 
 
 [^2]:  Hayward, David. “DarkBASIC Professional.” Micro Mart, no. 1308, Dennis Publishing Ltd., 
 Apr. 2014, p. 42.
