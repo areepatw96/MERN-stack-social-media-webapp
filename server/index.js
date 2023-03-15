@@ -8,7 +8,9 @@ import helmet from "helmet";
 import morgan from "morgan";
 import path from "path";
 import { fileURLToPath } from "url";
+import authroutes from "./routes/auth.js"; 
 import { register } from "./controllers/auth.js";
+
 
 /* All my middleware(sth that runs between different requests or functions that run in between different things) and package configurations */
 
@@ -25,6 +27,7 @@ app.use(bodydyparser.urlencoded({limit: "30mb", extended: true})); // used to pa
 app.use(cors()); // used to enable cors(used to make requests from one domain to another domain)
 app.use("/assets", express.static(path.join(__dirname, "<public/assets"))); // used to serve static files
 
+
 /* Setup my file storage */
 
 const storage = multer.diskStorage({ // used to store the files in the disk
@@ -38,9 +41,16 @@ const storage = multer.diskStorage({ // used to store the files in the disk
 
 const upload = multer({storage}); // used to upload the files
 
+
 /* Setup my routes with files*/
 
 app.post("auth/register", upload.single("picture"), register); // used to register a user
+
+
+/* Setup my routes */
+
+app.use("/auth", authroutes); // used to register a user
+
 
 /* Setup Mongoose(my database connection) */
 
