@@ -4,53 +4,56 @@ This a fully responsive socialmedia webapp using MERN stack
 ## Fully responsive Social Media Application Using MERN stack
 ### Motivation
 
-In today's digital age, social media has become integral to our daily lives. People use social 
-media platforms to connect, share, and communicate with others globally. However, many 
-existing social media platforms have limitations, and users often need help with privacy and 
+In today's digital age, social media has become integral to our daily lives. People use social media 
+platforms to connect, share, and communicate with others globally. For example, LinkedIn is for 
+employment, Twitter is for news, Pinterest is for ideas, and Facebook is for connecting with friends 
+and family. As a result, these platforms have a significant influence on their users [^5]. However, 
+many existing social media platforms have limitations, and users often need help with privacy and 
 security concerns. Therefore, there is a need for a new social media website that provides users 
 with a more personalized, user-friendly, and secure experience [^1].
-One primary motivation from a business perspective is that social media is a vital component of 
-people's lives today. Social apps are, therefore, in demand. We can communicate with one 
-another by creating a responsive social media app. Users can exchange thoughts, memories, and 
-many other creative activities through this social media and networking app. Additionally, we
-can acquire up-to-date tools and technologies in full-stack development and show off our 
-proficiency in server-side programming, APIs, front-end development, database management, 
-and other complicated data structures in our work portfolios. 
+Our social media platform is a similar platform for sharing digital content. It is built using MERN 
+(MongoDB, ExpressJS, ReactJS, and NodeJS) and other APIs and tools to create a responsive web 
+application [^5].
+Another motivation from a business perspective is that social media is a vital component of 
+people's lives today. Social apps are, therefore, in demand. We can communicate with one another 
+by creating a responsive social media app. Users can exchange thoughts, memories, and many 
+other creative activities through this social media and networking app.
 The main goal is to develop social media software that is easier to use and more responsive. It is 
 comparable to other social media apps in the market; however, it is much easier to use than other 
-apps.
+apps
 
 ### Significance
 
-The project's significance lies in providing users a secure and user-friendly platform to share 
-their precious memories. We will build a full-stack web application with the MERN, a powerful 
-and popular technology stack [^3].
+The project's significance lies in providing users a secure and user-friendly platform to share their 
+precious memories. We will build a full-stack web application with the MERN, a powerful and 
+popular technology stack [^2].
 
 This project is essential for several reasons:
 
-- To give users a platform for sharing and saving their memories: People value their 
-  memories, and this app will provide users with a platform to share those experiences with 
-  others and preserve them for the future.
-- Creating a fullstack MERN application with various features: It is a complex process 
-  that demands a thorough understanding of modern web development tools to build a fullstack     MERN app with authentication, likes, dark mode, and a responsive design.
-- Learning and applying various web development techniques: This project offers the 
-  chance to study and use several web development techniques, such as React, MongoDB, 
-  Node.js, Express, Material-UI, and JWT authentication.
-- Minimalism: To create a social networking app that is simple to use and free of 
-  unnecessary features that distract from the application's intended use.
-- To add to the portfolio: Implementing this project will help us build our portfolio and 
-  show prospective employers or clients my skills.
-  
-This project includes several distinctive features that set it apart, such as authentication, likes, 
-dark mode, and a responsive design. However, rather than being a general-purpose tool, it 
-concentrates on a particular use case: sharing and preserving memories. Lastly, cutting-edge web 
-development tools have been used to create this web app, such as the MERN stack, a well-liked 
-and full technology stack for creating full-stack online applications [^4].
-Overall the project offers a complete social media website built using the MERN stack, which 
-stands for MongoDB, Express.js, React, and Node.js. This web app aims to provide users a more 
-personalized, user-friendly, and secure experience. Additionally, this web app can be a valuable 
-resource for future developers looking to build their social media websites using the MERN 
-stack.
+To give users a platform for sharing and saving their memories: People value their memories, and 
+this app will provide users with a platform to share those experiences with others and preserve 
+them for the future.
+Minimalism: To create a social networking app that is simple to use and free of unnecessary 
+features that distract from the application's intended use.
+
+This project includes several distinctive features that set it apart, such as authentication, likes, dark 
+mode, and a responsive design. However, rather than being a general-purpose tool, it concentrates 
+on a particular use case: sharing and preserving memories. 
+
+Lastly, cutting-edge web development tools have been used to create this web app, such as the MERN stack, a well-liked and full 
+technology stack for creating full-stack online applications [^3].
+
+Overall, the project offers a complete social media website built using the MERN stack, which stands for MongoDB, Express.js, React, and Node.js. This web app aims to provide users a more personalized, user-friendly, and secure experience. 
+
+Additionally, this web app can be a valuable resource for future developers looking to build their social media websites using the MERN stack.
+
+This web application's distinctive combination of technology and features explains how it differs from other web applications, such as:
+
+Firstly, the MERN stack used to build this app is a popular and powerful combination of technologies that helps developers to create modern and scalable online apps. This guarantees that the app has a solid foundation and is stable and dependable.
+Secondly, the app is responsive, allowing it to adjust to various screen sizes and device types. This improves the user experience and makes the software available to a wider range of users.
+Thirdly, the app has a number of key features, including authentication, the capability to favorite or like content, and a dark mode setting. These features improve the user experience and offer extra functionality that users might not find in other programs of a similar nature.
+Finally, MUI (Material UI) makes it simpler for developers to create a dependable and attractive user interface. This makes sure the app is user-friendly and appealing to the eye.
+Overall, this web application stands out from other web apps because of its distinctive combination of technology and features, making it a solid and exciting tool for users. This social platform is also very easy to use and doesn't have any advertising or business features. Hence, It can be used for research on topics like influence, social networks, and similarity in a controlled environment without any interference [^5]
 
 ### Objective
 
