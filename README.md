@@ -14,10 +14,12 @@ with a more personalized, user-friendly, and secure experience [^1].
 Our social media platform is a similar platform for sharing digital content. It is built using MERN 
 (MongoDB, ExpressJS, ReactJS, and NodeJS) and other APIs and tools to create a responsive web 
 application [^5].
+
 Another motivation from a business perspective is that social media is a vital component of 
 people's lives today. Social apps are, therefore, in demand. We can communicate with one another 
 by creating a responsive social media app. Users can exchange thoughts, memories, and many 
 other creative activities through this social media and networking app.
+
 The main goal is to develop social media software that is easier to use and more responsive. It is 
 comparable to other social media apps in the market; however, it is much easier to use than other 
 apps
@@ -62,6 +64,7 @@ connecting people to facilitate accessible communication and effective social in
 Social media app will allow people to interact with each other and can be used for sharing news, 
 events, wishes, opinions, and various other forms of information. Nowadays, social media apps 
 have become the most used applications in our daily lives [^2].
+
 Our application has an interactive and fully responsive UI where you can post updates, including 
 pictures or text messages. Any person following us can view our posts, send a like, and comment 
 on them. In addition, we can follow any person of our choice and can also unfollow them.
@@ -69,6 +72,7 @@ We will use MERN to create the application consisting of Mongoose and Mongo DB f
 database, React framework for the front end, and Express JS and Node JS for the backend. By 
 the end of the development, we will be able to gain sufficient knowledge on building a full-stack 
 web application using a single language, i.e., JavaScript.
+
 One of the unique parts of this project is that everything in this project will be implemented from 
 scratch. Hence, the objective is to get familiar with the recent tools and technologies and gain 
 experience in the full-stack development sector while simultaneously providing Users with a 
