@@ -127,13 +127,17 @@ media app.
 [^1]: Mahale, A. (2023, March 5). 5 proven strategies to increase your followers in 2023. Medium. 
 Retrieved March 15, 2023, from https://medium.com/@annayam/5-proven-strategies-toincrease-your-followers-in-2023-f0b3429f4675
 
+
 [^2]: Jasraj. “Mern Stack.” GeeksforGeeks, GeeksforGeeks, 7 Oct. 2021, 
 https://www.geeksforgeeks.org/mern-stack/.
+
 
 [^3]: Nagar, Tarun. “Mern Stack - What Is It? Introduction & Benefits.” Dev Technosys, 
 Devtechnosys, 15 Dec. 2022, https://devtechnosys.com/insights/mern-stack/.
 
+
 [^4]: “Explore the World's Leading Design Portfolios.” Dribbble, https://dribbble.com/. 
+
 
 [^5]:  Desai, Krutika, and Jinan Fiaidhi. “Developing a Social Platform Using Mern Stack.” 
 Figshare, TechRxiv, 12 Dec. 2022, 
