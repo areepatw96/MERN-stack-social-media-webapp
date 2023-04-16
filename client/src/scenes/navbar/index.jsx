@@ -1,5 +1,5 @@
-import { useState } from "react";
-import {
+import { useState } from "react"; 
+import { 
   Box,
   IconButton,
   InputBase,
@@ -56,7 +56,7 @@ const Navbar = () => {
             },
           }}
         >
-          Sociopedia
+          Connectopia
         </Typography>
         {isNonMobileScreens && (
           <FlexBetween

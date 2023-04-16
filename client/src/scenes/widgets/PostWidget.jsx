@@ -23,19 +23,23 @@ import {
     likes,
     comments,
   }) => {
-    const [isComments, setIsComments] = useState(false);
-    const dispatch = useDispatch();
+    const [commentInput, setCommentInput] = useState("");
+    const [isComments, setIsComments] = useState(true); // state to toggle comments on and off 
+
+    const [newComment, setNewComment] = useState(""); // state to hold new comment
+
+    const dispatch = useDispatch(); // dispatch to update state
     const token = useSelector((state) => state.token);
-    const loggedInUserId = useSelector((state) => state.user._id);
-    const isLiked = Boolean(likes[loggedInUserId]);
-    const likeCount = Object.keys(likes).length;
+    const loggedInUserId = useSelector((state) => state.user._id); 
+    const isLiked = Boolean(likes[loggedInUserId]); // check if user has liked post
+    const likeCount = Object.keys(likes).length; // get number of likes
   
-    const { palette } = useTheme();
+    const { palette } = useTheme(); // get theme colors
     const main = palette.neutral.main;
     const primary = palette.primary.main;
   
-    const patchLike = async () => {
-      const response = await fetch(`http://localhost:3001/posts/${postId}/like`, {
+    const patchLike = async () => { // patch like to post 
+      const response = await fetch(`http://localhost:3001/posts/${postId}/like`, { 
         method: "PATCH",
         headers: {
           Authorization: `Bearer ${token}`,
@@ -46,18 +50,50 @@ import {
       const updatedPost = await response.json();
       dispatch(setPost({ post: updatedPost }));
     };
+
+    // this section is an experimental feature that I am working on
+    const addComment = async () => { // patch like to post 
+      const response = await fetch(`http://localhost:3001/posts/${postId}/like`, { 
+        method: "POST",
+        headers: {
+          Authorization: `Bearer ${token}`,
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ userId: loggedInUserId }),
+      });
+      const updatedPost = await response.json();
+      dispatch(setPost({ post: updatedPost }));
+      setNewComment(""); // reset new comment state
+    };
+
+    const deleteComment = async () => { // patch like to post 
+      const response = await fetch(`http://localhost:3001/posts/${postId}/like`, { 
+        method: "DELETE",
+        headers: {
+          Authorization: `Bearer ${token}`,
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ userId: loggedInUserId }),
+      });
+      const updatedPost = await response.json();
+      dispatch(setPost({ post: updatedPost }));
+  
+    };
+    // end of experimental feature
   
     return (
-      <WidgetWrapper m="2rem 0">
+      <WidgetWrapper m="2rem 0"> 
         <Friend
           friendId={postUserId}
           name={name}
           subtitle={location}
           userPicturePath={userPicturePath}
         />
+
         <Typography color={main} sx={{ mt: "1rem" }}>
           {description}
         </Typography>
+
         {picturePath && (
           <img
             width="100%"
@@ -67,6 +103,7 @@ import {
             src={`http://localhost:3001/assets/${picturePath}`}
           />
         )}
+        
         <FlexBetween mt="0.25rem">
           <FlexBetween gap="1rem">
             <FlexBetween gap="0.3rem">
@@ -80,8 +117,8 @@ import {
               <Typography>{likeCount}</Typography>
             </FlexBetween>
   
-            <FlexBetween gap="0.3rem">
-              <IconButton onClick={() => setIsComments(!isComments)}>
+            <FlexBetween gap="0.3rem"> 
+              <IconButton onClick={() => setIsComments(!isComments)}> 
                 <ChatBubbleOutlineOutlined />
               </IconButton>
               <Typography>{comments.length}</Typography>
@@ -96,7 +133,7 @@ import {
           <Box mt="0.5rem">
             {comments.map((comment, i) => (
               <Box key={`${name}-${i}`}>
-                <Divider />
+                <Divider /> 
                 <Typography sx={{ color: main, m: "0.5rem 0", pl: "1rem" }}>
                   {comment}
                 </Typography>

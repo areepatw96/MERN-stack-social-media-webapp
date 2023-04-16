@@ -1,37 +1,37 @@
-import { useState } from "react";
-import {
+import { useState } from "react"; 
+import { //
   Box,
   Button,
   TextField,
   useMediaQuery,
   Typography,
   useTheme,
-} from "@mui/material";
+} from "@mui/material"; //  import useMediaQuery and useTheme from @mui/material
 import EditOutlinedIcon from "@mui/icons-material/EditOutlined";
 import { Formik } from "formik";
 import * as yup from "yup";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
-import { setLogin } from "state";
-import Dropzone from "react-dropzone";
+import { setLogin } from "state"; //  import setLogin from state
+import Dropzone from "react-dropzone"; 
 import FlexBetween from "components/FlexBetween";
 
-const registerSchema = yup.object().shape({
-  firstName: yup.string().required("required"),
-  lastName: yup.string().required("required"),
-  email: yup.string().email("invalid email").required("required"),
-  password: yup.string().required("required"),
+const registerSchema = yup.object().shape({ //  import yup from yup and create a schema for the form for registration
+  firstName: yup.string().required("required"), 
+  lastName: yup.string().required("required"), // validation method that checks if the input is a string and if it is required (not empty)
+  email: yup.string().email("invalid email").required("required"), // validation method that checks if the input is a string, if it is an email, and if it is required (not empty)
+  password: yup.string().required("required"), 
   location: yup.string().required("required"),
   occupation: yup.string().required("required"),
   picture: yup.string().required("required"),
 });
 
-const loginSchema = yup.object().shape({
-  email: yup.string().email("invalid email").required("required"),
+const loginSchema = yup.object().shape({ //  import yup from yup and create a schema for the form for validation
+  email: yup.string().email("invalid email").required("required"), 
   password: yup.string().required("required"),
 });
 
-const initialValuesRegister = {
+const initialValuesRegister = { //  create an object with the initial values for the form registration
   firstName: "",
   lastName: "",
   email: "",
@@ -41,72 +41,74 @@ const initialValuesRegister = {
   picture: "",
 };
 
-const initialValuesLogin = {
+const initialValuesLogin = {  //  create an object with the initial values for the form login
   email: "",
   password: "",
 };
 
-const Form = () => {
-  const [pageType, setPageType] = useState("login");
-  const { palette } = useTheme();
-  const dispatch = useDispatch();
-  const navigate = useNavigate();
-  const isNonMobile = useMediaQuery("(min-width:600px)");
-  const isLogin = pageType === "login";
+const Form = () => { 
+  const [pageType, setPageType] = useState("login"); //  create a state for the page type (login or register) and set the initial value to login 
+  const { palette } = useTheme(); 
+  const dispatch = useDispatch(); 
+  const navigate = useNavigate(); 
+  const isNonMobile = useMediaQuery("(min-width:600px)"); 
+  const isLogin = pageType === "login"; //  create a variable for the page type (login or register) and check if it is login 
   const isRegister = pageType === "register";
 
-  const register = async (values, onSubmitProps) => {
+  const register = async (values, onSubmitProps) => { //  create a function for the registration form that takes the values and the onSubmitProps as parameters 
     // this allows us to send form info with image
-    const formData = new FormData();
+
+    const formData = new FormData(); 
     for (let value in values) {
       formData.append(value, values[value]);
     }
-    formData.append("picturePath", values.picture.name);
+    formData.append("picturePath", values.picture.name); //  append the picture path to the form data
 
-    const savedUserResponse = await fetch(
-      "http://localhost:3001/auth/register",
+    const savedUserResponse = await fetch( //  fetch the data from the server 
+      "http://localhost:3001/auth/register", 
       {
-        method: "POST",
+        method: "POST", 
         body: formData,
       }
     );
-    const savedUser = await savedUserResponse.json();
+    const savedUser = await savedUserResponse.json(); 
     onSubmitProps.resetForm();
 
-    if (savedUser) {
-      setPageType("login");
+    if (savedUser) { //  if the user is saved, set the login state and navigate to the home page
+      setPageType("login"); //  set the page type to login
     }
   };
 
-  const login = async (values, onSubmitProps) => {
-    const loggedInResponse = await fetch("http://localhost:3001/auth/login", {
+  const login = async (values, onSubmitProps) => { //  create a function for the login form that takes the values and the onSubmitProps as parameters
+    const loggedInResponse = await fetch("http://localhost:3001/auth/login", { //  fetch the data from the server 
       method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(values),
+      headers: { "Content-Type": "application/json" }, 
+      body: JSON.stringify(values), 
     });
-    const loggedIn = await loggedInResponse.json();
-    onSubmitProps.resetForm();
-    if (loggedIn) {
+
+    const loggedIn = await loggedInResponse.json(); //  convert the response to json 
+    onSubmitProps.resetForm(); //  reset the form 
+    if (loggedIn) { //  if the user is logged in, set the login state and navigate to the home page
       dispatch(
         setLogin({
-          user: loggedIn.user,
-          token: loggedIn.token,
+          user: loggedIn.user, //  set the user state
+          token: loggedIn.token, //  set the token state
         })
       );
-      navigate("/home");
+      navigate("/home"); //  navigate to the home page
     }
   };
 
-  const handleFormSubmit = async (values, onSubmitProps) => {
-    if (isLogin) await login(values, onSubmitProps);
-    if (isRegister) await register(values, onSubmitProps);
+  const handleFormSubmit = async (values, onSubmitProps) => { //  create a function that handles the form submit and takes the values and the onSubmitProps as parameters 
+    if (isLogin) await login(values, onSubmitProps); //  if the page type is login, call the login function
+    if (isRegister) await register(values, onSubmitProps); //  if the page type is register, call the register function
   };
 
   return (
-    <Formik
-      onSubmit={handleFormSubmit}
-      initialValues={isLogin ? initialValuesLogin : initialValuesRegister}
-      validationSchema={isLogin ? loginSchema : registerSchema}
+    <Formik 
+      onSubmit={handleFormSubmit} //  call the handleFormSubmit function when the form is submitted
+      initialValues={isLogin ? initialValuesLogin : initialValuesRegister} //  set the initial values for the form depending on the page type
+      validationSchema={isLogin ? loginSchema : registerSchema} //  set the validation schema for the form depending on the page type
     >
       {({
         values,
@@ -152,12 +154,12 @@ const Form = () => {
                   sx={{ gridColumn: "span 2" }}
                 />
                 <TextField
-                  label="Location"
-                  onBlur={handleBlur}
+                  label="Location" //  add a location field
+                  onBlur={handleBlur} 
                   onChange={handleChange}
-                  value={values.location}
+                  value={values.location} //  set the value of the location field to the location value
                   name="location"
-                  error={Boolean(touched.location) && Boolean(errors.location)}
+                  error={Boolean(touched.location) && Boolean(errors.location)} //  check if the location field is touched and if there are errors
                   helperText={touched.location && errors.location}
                   sx={{ gridColumn: "span 4" }}
                 />

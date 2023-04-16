@@ -2,7 +2,7 @@ import mongoose from "mongoose"; // Import mongoose to create a schema for the p
 
 const postSchema = mongoose.Schema( // Schema for a post in the database (MongoDB) 
   {
-    userId: { // User ID of the user who created the post 
+    userId: { // User ID of the user who created the post  
       type: String,
       required: true,
     },

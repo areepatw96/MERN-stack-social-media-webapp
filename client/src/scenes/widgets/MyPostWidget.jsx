@@ -1,4 +1,4 @@
-import {
+import { 
     EditOutlined,
     DeleteOutlined,
     AttachFileOutlined,
@@ -25,45 +25,45 @@ import {
   import { useDispatch, useSelector } from "react-redux";
   import { setPosts } from "state";
   
-  const MyPostWidget = ({ picturePath }) => {
-    const dispatch = useDispatch();
-    const [isImage, setIsImage] = useState(false);
-    const [image, setImage] = useState(null);
-    const [post, setPost] = useState("");
-    const { palette } = useTheme();
-    const { _id } = useSelector((state) => state.user);
-    const token = useSelector((state) => state.token);
-    const isNonMobileScreens = useMediaQuery("(min-width: 1000px)");
+  const MyPostWidget = ({ picturePath }) => {  // This is the component that renders the "My Post" widget. It is called from the Home scene. 
+    const dispatch = useDispatch();  
+    const [isImage, setIsImage] = useState(false); // This is a state variable that is used to toggle the image upload feature.
+    const [image, setImage] = useState(null); // This is a state variable that holds the image that the user uploads.
+    const [post, setPost] = useState(""); // This is a state variable that holds the text that the user types in the input field.
+    const { palette } = useTheme(); // This is a built-in React hook that allows us to access the theme object.
+    const { _id } = useSelector((state) => state.user); 
+    const token = useSelector((state) => state.token); 
+    const isNonMobileScreens = useMediaQuery("(min-width: 1000px)"); // This is a built-in React hook that allows us to check the screen size. 
     const mediumMain = palette.neutral.mediumMain;
     const medium = palette.neutral.medium;
   
-    const handlePost = async () => {
-      const formData = new FormData();
-      formData.append("userId", _id);
-      formData.append("description", post);
+    const handlePost = async () => { // This is the function that is called when the user clicks the "Post" button.
+      const formData = new FormData(); // This is a built-in JavaScript object that allows us to send data to the server.
+      formData.append("userId", _id);  // This is the user's ID.
+      formData.append("description", post); // This is the text that the user typed in the input field.
       if (image) {
-        formData.append("picture", image);
-        formData.append("picturePath", image.name);
+        formData.append("picture", image); // This is the image that the user uploaded.
+        formData.append("picturePath", image.name); // This is the name of the image that the user uploaded.
       }
   
-      const response = await fetch(`http://localhost:3001/posts`, {
+      const response = await fetch(`http://localhost:3001/posts`, { // This is the fetch request that sends the data to the server.
         method: "POST",
         headers: { Authorization: `Bearer ${token}` },
         body: formData,
       });
-      const posts = await response.json();
+      const posts = await response.json(); 
       dispatch(setPosts({ posts }));
       setImage(null);
       setPost("");
     };
   
     return (
-      <WidgetWrapper>
-        <FlexBetween gap="1.5rem">
+      <WidgetWrapper> 
+        <FlexBetween gap="1.5rem"> 
           <UserImage image={picturePath} />
           <InputBase
             placeholder="What's on your mind..."
-            onChange={(e) => setPost(e.target.value)}
+            onChange={(e) => setPost(e.target.value)} // This is the onChange event handler that updates the post state variable.
             value={post}
             sx={{
               width: "100%",
