@@ -1,35 +1,42 @@
-import mongoose from "mongoose";
+import mongoose from "mongoose"; // Import mongoose to create a schema for the post
 
-const postSchema = mongoose.Schema(
+const postSchema = mongoose.Schema( // Schema for a post in the database (MongoDB) 
   {
-    userId: {
+    userId: { // User ID of the user who created the post 
       type: String,
       required: true,
     },
-    firstName: {
+
+    firstName: { // First name of the user who created the post 
       type: String,
       required: true,
     },
-    lastName: {
+
+    lastName: { // Last name of the user who created the post
       type: String,
       required: true,
     },
-    location: String,
-    description: String,
-    picturePath: String,
-    userPicturePath: String,
-    likes: {
-      type: Map,
-      of: Boolean,
+
+    location: String, // Location of the user who created the post
+    description: String, // Description of the post
+    picturePath: String, // Path to the picture of the post
+    userPicturePath: String, // Path to the picture of the user who created the post
+    likes: { // Array of user IDs of users who liked the post
+      type: Map, // Map is used instead of an array because it is easier to check if a user has already liked a post
+      of: Boolean, // The value of each key in the map is a boolean
     },
-    comments: {
+
+    comments: { // Array of comments on the post
       type: Array,
       default: [],
     },
+
   },
-  { timestamps: true }
-);
 
-const Post = mongoose.model("Post", postSchema);
+  { timestamps: true } // This will automatically add createdAt and updatedAt fields to the schema
+  
+); 
 
-export default Post;
+const Post = mongoose.model("Post", postSchema); // Create a model for the post schema
+
+export default Post; // Export the post model
