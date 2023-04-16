@@ -1,8 +1,8 @@
 import express from "express";
-import {login} from "../controllers/auth.js";
+import { login } from "../controllers/auth.js";
 
-const router = express.Router(); // used to create a router
+const router = express.Router();
 
-router.post("/login", login); // used to login a user
+router.post("/login", login);
 
-export default router; // used to connect to the database
+export default router;
