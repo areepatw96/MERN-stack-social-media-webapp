@@ -5,13 +5,13 @@ import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { setFriends } from "state";
 
-const FriendListWidget = ({ userId }) => {
+const FriendListWidget = ({ userId }) => { // userId is a prop that is passed from client\src\scenes\Profile.jsx 
   const dispatch = useDispatch();
   const { palette } = useTheme();
   const token = useSelector((state) => state.token);
   const friends = useSelector((state) => state.user.friends);
 
-  const getFriends = async () => {
+  const getFriends = async () => { // getFriends is a function that sends a GET request to the server to get the user's friends list
     const response = await fetch(
       `http://localhost:3001/users/${userId}/friends`,
       {

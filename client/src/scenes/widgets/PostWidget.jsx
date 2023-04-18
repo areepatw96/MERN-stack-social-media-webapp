@@ -12,7 +12,7 @@ import {
   import { useDispatch, useSelector } from "react-redux";
   import { setPost } from "state";
   
-  const PostWidget = ({
+  const PostWidget = ({ // PostWidget component  
     postId,
     postUserId,
     name,
@@ -23,7 +23,7 @@ import {
     likes,
     comments,
   }) => {
-    const [commentInput, setCommentInput] = useState("");
+    const [commentInput, setCommentInput] = useState(""); // state to hold comment input
     const [isComments, setIsComments] = useState(true); // state to toggle comments on and off 
 
     const [newComment, setNewComment] = useState(""); // state to hold new comment
