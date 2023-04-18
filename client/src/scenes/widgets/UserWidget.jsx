@@ -1,4 +1,4 @@
-import {
+import { 
     ManageAccountsOutlined,
     EditOutlined,
     LocationOnOutlined,
@@ -12,7 +12,7 @@ import {
   import { useEffect, useState } from "react";
   import { useNavigate } from "react-router-dom";
   
-  const UserWidget = ({ userId, picturePath }) => {
+  const UserWidget = ({ userId, picturePath }) => { // userId is passed in from client\src\scenes\profile\index.jsx
     const [user, setUser] = useState(null);
     const { palette } = useTheme();
     const navigate = useNavigate();

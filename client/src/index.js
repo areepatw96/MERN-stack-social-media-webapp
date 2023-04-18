@@ -14,24 +14,24 @@ import {
   PERSIST,
   PURGE,
   REGISTER,
-} from "redux-persist";
-import storage from "redux-persist/lib/storage";
+} from "redux-persist"; // Import the persist store and the persist reducer
+import storage from "redux-persist/lib/storage"; 
 import { PersistGate } from "redux-persist/integration/react";
 
-const persistConfig = { key: "root", storage, version: 1 };
-const persistedReducer = persistReducer(persistConfig, authReducer);
-const store = configureStore({
+const persistConfig = { key: "root", storage, version: 1 }; // Create the persist config 
+const persistedReducer = persistReducer(persistConfig, authReducer); // Create the persisted reducer
+const store = configureStore({ 
   reducer: persistedReducer,
-  middleware: (getDefaultMiddleware) =>
-    getDefaultMiddleware({
+  middleware: (getDefaultMiddleware) => // Add the middleware to the store 
+    getDefaultMiddleware({ 
       serializableCheck: {
-        ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
+        ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER], // Ignore the actions that are not serializable 
       },
     }),
 });
 
-const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(
+const root = ReactDOM.createRoot(document.getElementById("root")); // Create the root element 
+root.render( // Render the app component 
   <React.StrictMode>
     <Provider store={store}>
       <PersistGate loading={null} persistor={persistStore(store)}>

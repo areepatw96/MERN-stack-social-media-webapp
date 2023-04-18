@@ -1,12 +1,12 @@
-import { PersonAddOutlined, PersonRemoveOutlined } from "@mui/icons-material";
+import { PersonAddOutlined, PersonRemoveOutlined } from "@mui/icons-material"; 
 import { Box, IconButton, Typography, useTheme } from "@mui/material";
 import { useDispatch, useSelector } from "react-redux";
-import { useNavigate } from "react-router-dom";
-import { setFriends } from "state";
-import FlexBetween from "./FlexBetween";
+import { useNavigate } from "react-router-dom"; // useNavigate is a hook from react-router-dom
+import { setFriends } from "state"; // setFriends is an action from client\src\state\actions\userActions.js
+import FlexBetween from "./FlexBetween"; // FlexBetween is a component from client\src\components\FlexBetween.jsx
 import UserImage from "./UserImage";
 
-const Friend = ({ friendId, name, subtitle, userPicturePath }) => {
+const Friend = ({ friendId, name, subtitle, userPicturePath }) => { 
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const { _id } = useSelector((state) => state.user);
@@ -19,9 +19,9 @@ const Friend = ({ friendId, name, subtitle, userPicturePath }) => {
   const main = palette.neutral.main;
   const medium = palette.neutral.medium;
 
-  const isFriend = friends.find((friend) => friend._id === friendId);
+  const isFriend = friends.find((friend) => friend._id === friendId);  
 
-  const patchFriend = async () => {
+  const patchFriend = async () => { // patchFriend is a function that sends a PATCH request to the server to update the user's friends list after you follow or unfollow
     const response = await fetch(
       `http://localhost:3001/users/${_id}/${friendId}`,
       {
